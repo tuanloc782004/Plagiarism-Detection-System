@@ -28,3 +28,1603 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 22:40:53.137
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 22:52:35.852
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 22:53:47.711
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-05-13 22:56:44.329
+!MESSAGE Command list starting LS: org.springframework.tooling.boot.ls
+START:
+C:\Users\Windows 10\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_22.0.2.v20240802-1626\jre\bin\javaw.exe
+-Dsts.lsp.client=eclipse
+-Xmx1024m
+-XX:TieredStopAtLevel=1
+-Xlog:jni+resolve=off
+-XX:ErrorFile=D:/Plagiarism Detection System/.metadata/.plugins/org.springframework.tooling.boot.ls/fatal-error-spring-boot_1747151804328
+-Dlanguageserver.hover-timeout=225
+-jar
+C:\Users\Windows 10\eclipse\jee-2024-09\eclipse\..\..\..\.p2\pool\plugins\org.springframework.tooling.boot.ls_1.57.0.202409101848\servers\spring-boot-language-server\spring-boot-language-server-1.57.0-SNAPSHOT-exec.jar
+END
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 22:56:44.329
+!MESSAGE DelegatingStreamConnectionProvider - Starting Boot LS
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-05-13 22:56:44.335
+!MESSAGE Started org.springframework.tooling.boot.ls LS process 16320
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 23:10:32.693
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.eclipse.jst.jee 4 2 2025-05-13 23:11:19.067
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jst.jee".
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1083)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:187)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:238)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.getXmlWebApp(Web25MergedModelProvider.java:59)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.internalModelChanged(Web25MergedModelProvider.java:156)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.xmlModelChanged(Web25MergedModelProvider.java:147)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$XmlModelListener.modelsChanged(AbstractMergedModelProvider.java:93)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$NotifyRunner.run(JEE5ModelProvider.java:483)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.notifyListeners(JEE5ModelProvider.java:456)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.resourceChanged(JEE5ModelProvider.java:117)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$ResourceAdapter.notifyChanged(JEE5ModelProvider.java:81)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.setModified(ResourceImpl.java:1867)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.modified(ResourceImpl.java:486)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didRemove(ResourceImpl.java:447)
+	at org.eclipse.emf.common.util.AbstractEList.didClear(AbstractEList.java:170)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didClear(ResourceImpl.java:466)
+	at org.eclipse.emf.common.util.BasicEList.clear(BasicEList.java:638)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.doClear(NotifyingListImpl.java:1158)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.clear(NotifyingListImpl.java:1085)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.doUnload(ResourceImpl.java:1699)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doUnload(XMLResourceImpl.java:719)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.unload(ResourceImpl.java:1721)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredUnloadedResources(ResourceSetWorkbenchEditSynchronizer.java:164)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:233)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2465)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ui.ide.undo.AbstractWorkspaceOperation.execute(AbstractWorkspaceOperation.java:199)
+	at org.eclipse.ui.dialogs.WizardNewFileCreationPage.lambda$1(WizardNewFileCreationPage.java:405)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1043)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:260)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:830)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 39 more
+
+!ENTRY org.eclipse.jst.jee 4 0 2025-05-13 23:11:19.068
+!MESSAGE org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1083)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:187)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:238)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.getXmlWebApp(Web25MergedModelProvider.java:59)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.internalModelChanged(Web25MergedModelProvider.java:156)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.xmlModelChanged(Web25MergedModelProvider.java:147)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$XmlModelListener.modelsChanged(AbstractMergedModelProvider.java:93)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$NotifyRunner.run(JEE5ModelProvider.java:483)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.notifyListeners(JEE5ModelProvider.java:456)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.resourceChanged(JEE5ModelProvider.java:117)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$ResourceAdapter.notifyChanged(JEE5ModelProvider.java:81)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.setModified(ResourceImpl.java:1867)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.modified(ResourceImpl.java:486)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didRemove(ResourceImpl.java:447)
+	at org.eclipse.emf.common.util.AbstractEList.didClear(AbstractEList.java:170)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didClear(ResourceImpl.java:466)
+	at org.eclipse.emf.common.util.BasicEList.clear(BasicEList.java:638)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.doClear(NotifyingListImpl.java:1158)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.clear(NotifyingListImpl.java:1085)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.doUnload(ResourceImpl.java:1699)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doUnload(XMLResourceImpl.java:719)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.unload(ResourceImpl.java:1721)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredUnloadedResources(ResourceSetWorkbenchEditSynchronizer.java:164)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:233)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2465)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ui.ide.undo.AbstractWorkspaceOperation.execute(AbstractWorkspaceOperation.java:199)
+	at org.eclipse.ui.dialogs.WizardNewFileCreationPage.lambda$1(WizardNewFileCreationPage.java:405)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/PlagiarismChecker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1043)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:260)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:830)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 39 more
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.883
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.883
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.885
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.885
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.896
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:11:19.901
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.397
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.398
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.399
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.400
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.411
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:36.415
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.545
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.546
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.547
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.550
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.558
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:44.564
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.171
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.172
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.173
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.175
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.188
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:14:52.192
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wst.server.core 4 0 2025-05-13 23:18:33.390
+!MESSAGE Server Tomcat v9.0 Server at localhost failed to start.
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.686
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.687
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.689
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.689
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.698
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:00.703
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.819
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.819
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.821
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.821
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.831
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:19:53.834
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.048
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.049
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.050
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.051
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.058
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:21:54.062
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.532
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.533
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.534
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.535
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.543
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:23:50.549
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 23:25:14.437
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.620
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.621
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.622
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.egit.core 4 0 2025-05-13 23:25:14.623
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.nio.file.NoSuchFileException: D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.core.resources\.projects\PlagiarismChecker\org.eclipse.egit.core\GitProjectData.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:647)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:217)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:116)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.resourceChanged(IndexDiffCacheEntry.java:701)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.checkpoint(Workspace.java:655)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:252)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.623
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.633
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-13 23:25:14.639
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2025-05-13 23:25:15.144
+!MESSAGE Internal Error
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:816)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Contains: Could not delete '/PlagiarismChecker/src'.
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:416)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:363)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:398)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:855)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1834)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Contains: Problems encountered while deleting files.
+Contains: Problems encountered while deleting files.
+Contains: OK
+Contains: Problems encountered while deleting files.
+Contains: OK
+Contains: OK
+Contains: OK
+Contains: Problems encountered while deleting files.
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar.
+java.nio.file.FileSystemException: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:275)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:189)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:126)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:413)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:363)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:398)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:855)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1834)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Contains: OK
+Contains: Could not delete 'D:\Plagiarism Detection System\PlagiarismChecker'.
+!SUBENTRY 1 org.eclipse.core.resources 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2025-05-13 23:25:15.146
+!MESSAGE Could not delete '/PlagiarismChecker/src'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:416)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:363)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:398)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:855)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1834)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Contains: Problems encountered while deleting files.
+Contains: Problems encountered while deleting files.
+Contains: OK
+Contains: Problems encountered while deleting files.
+Contains: OK
+Contains: OK
+Contains: OK
+Contains: Problems encountered while deleting files.
+Contains: Problems encountered while deleting files.
+Contains: Could not delete: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar.
+java.nio.file.FileSystemException: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:275)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:189)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:126)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:413)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:363)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:398)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:855)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1834)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Contains: OK
+!SUBENTRY 3 org.eclipse.core.resources 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting resources.
+!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 6 unknown 0 0 2025-05-13 23:25:15.146
+!MESSAGE OK
+!SUBENTRY 6 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 7 unknown 0 0 2025-05-13 23:25:15.146
+!MESSAGE OK
+!SUBENTRY 7 unknown 0 0 2025-05-13 23:25:15.146
+!MESSAGE OK
+!SUBENTRY 7 unknown 0 0 2025-05-13 23:25:15.146
+!MESSAGE OK
+!SUBENTRY 7 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 8 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Problems encountered while deleting files.
+!SUBENTRY 9 org.eclipse.core.filesystem 4 273 2025-05-13 23:25:15.146
+!MESSAGE Could not delete: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar.
+!STACK 0
+java.nio.file.FileSystemException: D:\Plagiarism Detection System\PlagiarismChecker\src\main\webapp\WEB-INF\lib\mysql-connector-j-9.3.0.jar: The process cannot access the file because it is being used by another process
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:92)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.implDelete(WindowsFileSystemProvider.java:273)
+	at java.base/sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(AbstractFileSystemProvider.java:109)
+	at java.base/java.nio.file.Files.deleteIfExists(Files.java:1191)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:275)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:295)
+	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:189)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
+	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:156)
+	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:126)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:413)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:363)
+	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:398)
+	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:855)
+	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1834)
+	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:803)
+	at org.eclipse.core.internal.resources.Project.delete(Project.java:359)
+	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:150)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.lambda$0(PerformChangeOperation.java:247)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:284)
+	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:94)
+	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:210)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2451)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+!SUBENTRY 8 unknown 0 0 2025-05-13 23:25:15.147
+!MESSAGE OK
+!SUBENTRY 2 org.eclipse.core.resources 4 273 2025-05-13 23:25:15.147
+!MESSAGE Could not delete 'D:\Plagiarism Detection System\PlagiarismChecker'.
+
+!ENTRY org.eclipse.egit.core 4 0 2025-05-13 23:25:17.297
+!MESSAGE Git team provider configuration has gone missing.
+!STACK 0
+java.nio.file.NoSuchFileException: D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.core.resources\.projects\PlagiarismChecker\org.eclipse.egit.core\GitProjectData.properties
+	at java.base/sun.nio.fs.WindowsException.translateToIOException(WindowsException.java:85)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:103)
+	at java.base/sun.nio.fs.WindowsException.rethrowAsIOException(WindowsException.java:108)
+	at java.base/sun.nio.fs.WindowsFileSystemProvider.newByteChannel(WindowsFileSystemProvider.java:234)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:379)
+	at java.base/java.nio.file.Files.newByteChannel(Files.java:431)
+	at java.base/java.nio.file.spi.FileSystemProvider.newInputStream(FileSystemProvider.java:420)
+	at java.base/java.nio.file.Files.newInputStream(Files.java:159)
+	at org.eclipse.egit.core.project.GitProjectData.load(GitProjectData.java:647)
+	at org.eclipse.egit.core.project.GitProjectData.get(GitProjectData.java:217)
+	at org.eclipse.egit.core.internal.indexdiff.GitResourceDeltaVisitor.visit(GitResourceDeltaVisitor.java:116)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:77)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:87)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:61)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.resourceChanged(IndexDiffCacheEntry.java:701)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1587)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:50)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-13 23:25:22.320
+!MESSAGE Classpath changed for project: PlagiarismChecker
+
+!ENTRY org.eclipse.ui 4 0 2025-05-13 23:31:24.482
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.io.File.getParentFile()" because the return value of "org.apache.maven.model.Model.getPomFile()" is null
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.getProjectName(ProjectConfigurationManager.java:1003)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.validate(MavenProjectWizardLocationPage.java:298)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.lambda$2(MavenProjectWizardLocationPage.java:145)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.actions.NewProjectAction.run(NewProjectAction.java:119)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:415)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 4 0 2025-05-13 23:31:57.509
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.io.File.getParentFile()" because the return value of "org.apache.maven.model.Model.getPomFile()" is null
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.getProjectName(ProjectConfigurationManager.java:1003)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.validate(MavenProjectWizardLocationPage.java:298)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.setVisible(MavenProjectWizardLocationPage.java:211)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1253)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1225)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1225)
+	at org.eclipse.jface.wizard.WizardDialog.backPressed(WizardDialog.java:455)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.actions.NewProjectAction.run(NewProjectAction.java:119)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:415)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 4 0 2025-05-13 23:32:41.142
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.io.File.getParentFile()" because the return value of "org.apache.maven.model.Model.getPomFile()" is null
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.getProjectName(ProjectConfigurationManager.java:1003)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.validate(MavenProjectWizardLocationPage.java:298)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.setVisible(MavenProjectWizardLocationPage.java:211)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1253)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1225)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1225)
+	at org.eclipse.jface.wizard.WizardDialog.nextPressed(WizardDialog.java:922)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:470)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.actions.NewProjectAction.run(NewProjectAction.java:119)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:415)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.ui 4 0 2025-05-13 23:32:46.647
+!MESSAGE Unhandled event loop exception
+!STACK 0
+java.lang.NullPointerException: Cannot invoke "java.io.File.getParentFile()" because the return value of "org.apache.maven.model.Model.getPomFile()" is null
+	at org.eclipse.m2e.core.internal.project.ProjectConfigurationManager.getProjectName(ProjectConfigurationManager.java:1003)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.validate(MavenProjectWizardLocationPage.java:298)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizardLocationPage.setVisible(MavenProjectWizardLocationPage.java:211)
+	at org.eclipse.jface.wizard.WizardDialog.updateForPage(WizardDialog.java:1253)
+	at org.eclipse.jface.wizard.WizardDialog.lambda$3(WizardDialog.java:1225)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.jface.wizard.WizardDialog.showPage(WizardDialog.java:1225)
+	at org.eclipse.jface.wizard.WizardDialog.backPressed(WizardDialog.java:455)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:466)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:84)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:265)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:823)
+	at org.eclipse.jface.window.Window.open(Window.java:799)
+	at org.eclipse.ui.actions.NewProjectAction.run(NewProjectAction.java:119)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:474)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:581)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:415)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4124)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3712)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)
+
+!ENTRY org.eclipse.m2e.core.ui 4 0 2025-05-14 00:05:35.191
+!MESSAGE Failed to create project.
+!STACK 0
+java.util.concurrent.ExecutionException: java.lang.IllegalStateException: Process exit value was 1. Console printout:
+===============================================================
+[INFO] Scanning for projects...
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/codehaus/mojo/maven-metadata.xml
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-metadata.xml
+Progress (1): 1.4/21 kBProgress (1): 2.8/21 kBProgress (1): 4.1/21 kBProgress (1): 5.5/21 kBProgress (1): 6.9/21 kBProgress (1): 8.3/21 kBProgress (1): 9.7/21 kBProgress (2): 9.7/21 kB | 1.4/14 kBProgress (2): 11/21 kB | 1.4/14 kB Progress (2): 12/21 kB | 1.4/14 kBProgress (2): 12/21 kB | 2.8/14 kBProgress (2): 12/21 kB | 4.1/14 kBProgress (2): 12/21 kB | 5.5/14 kBProgress (2): 12/21 kB | 6.9/14 kBProgress (2): 12/21 kB | 8.3/14 kBProgress (2): 12/21 kB | 9.7/14 kBProgress (2): 12/21 kB | 11/14 kB Progress (2): 12/21 kB | 12/14 kBProgress (2): 14/21 kB | 12/14 kBProgress (2): 15/21 kB | 12/14 kBProgress (2): 16/21 kB | 12/14 kBProgress (2): 17/21 kB | 12/14 kBProgress (2): 17/21 kB | 14/14 kBProgress (2): 17/21 kB | 14 kB   Progress (2): 19/21 kB | 14 kBProgress (2): 20/21 kB | 14 kBProgress (2): 21 kB | 14 kB                              Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/codehaus/mojo/maven-metadata.xml[90m (21 kB at 25 kB/s)[0m
+Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-metadata.xml[90m (14 kB at 17 kB/s)[0m
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-archetype-plugin/maven-metadata.xml
+Progress (1): 1.0 kB                    Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-archetype-plugin/maven-metadata.xml[90m (1.0 kB at 16 kB/s)[0m
+[INFO] 
+[INFO] [1m------------------< [0;36morg.apache.maven:standalone-pom[0;1m >-------------------[m
+[INFO] [1mBuilding Maven Stub Project (No POM) 1[m
+[INFO] [1m--------------------------------[ pom ]---------------------------------[m
+[INFO] 
+[INFO] [1m>>> [0;32marchetype:3.3.1:generate[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m >>>[m
+[INFO] 
+[INFO] [1m<<< [0;32marchetype:3.3.1:generate[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m <<<[m
+[INFO] 
+[INFO] 
+[INFO] [1m--- [0;32marchetype:3.3.1:generate[m [1m(default-cli)[m @ [36mstandalone-pom[0;1m ---[m
+[INFO] Generating project in Interactive mode
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0marchetype-catalog.xml
+Progress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 10.0/17 MBProgress (1): 10.0/17 MBProgress (1): 10.0/17 MBProgress (1): 10/17 MB  Progress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17 MB                      Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0marchetype-catalog.xml[90m (17 MB at 5.3 MB/s)[0m
+[INFO] Archetype repository not defined. Using the one from [org.apache.maven.archetypes:maven-archetype-quickstart:1.5] found in catalog remote
+[INFO] Using property: groupId = com.lpt
+[INFO] Using property: artifactId = plagiarism-checker
+[INFO] Using property: version = 0.0.1-SNAPSHOT
+[INFO] Using property: package = com.lpt.plagiarism_checker
+Confirm properties configuration:
+groupId: com.lpt
+artifactId: plagiarism-checker
+version: 0.0.1-SNAPSHOT
+package: com.lpt.plagiarism_checker
+ Y: 
+"===============================================================
+	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:396)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2073)
+	at org.eclipse.m2e.core.ui.internal.archetype.ArchetypeGenerator.createArchetypeProjects(ArchetypeGenerator.java:164)
+	at org.eclipse.m2e.core.ui.internal.wizards.MavenProjectWizard$3.doCreateMavenProjects(MavenProjectWizard.java:246)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectJob$1.doCreateMavenProjects(AbstractCreateMavenProjectJob.java:51)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectsOperation.run(AbstractCreateMavenProjectsOperation.java:56)
+	at org.eclipse.m2e.core.ui.internal.wizards.AbstractCreateMavenProjectJob.runInWorkspace(AbstractCreateMavenProjectJob.java:55)
+	at org.eclipse.core.internal.resources.InternalWorkspaceJob.run(InternalWorkspaceJob.java:43)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: java.lang.IllegalStateException: Process exit value was 1. Console printout:
+===============================================================
+[INFO] Scanning for projects...
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/codehaus/mojo/maven-metadata.xml
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-metadata.xml
+Progress (1): 1.4/21 kBProgress (1): 2.8/21 kBProgress (1): 4.1/21 kBProgress (1): 5.5/21 kBProgress (1): 6.9/21 kBProgress (1): 8.3/21 kBProgress (1): 9.7/21 kBProgress (2): 9.7/21 kB | 1.4/14 kBProgress (2): 11/21 kB | 1.4/14 kB Progress (2): 12/21 kB | 1.4/14 kBProgress (2): 12/21 kB | 2.8/14 kBProgress (2): 12/21 kB | 4.1/14 kBProgress (2): 12/21 kB | 5.5/14 kBProgress (2): 12/21 kB | 6.9/14 kBProgress (2): 12/21 kB | 8.3/14 kBProgress (2): 12/21 kB | 9.7/14 kBProgress (2): 12/21 kB | 11/14 kB Progress (2): 12/21 kB | 12/14 kBProgress (2): 14/21 kB | 12/14 kBProgress (2): 15/21 kB | 12/14 kBProgress (2): 16/21 kB | 12/14 kBProgress (2): 17/21 kB | 12/14 kBProgress (2): 17/21 kB | 14/14 kBProgress (2): 17/21 kB | 14 kB   Progress (2): 19/21 kB | 14 kBProgress (2): 20/21 kB | 14 kBProgress (2): 21 kB | 14 kB                              Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/codehaus/mojo/maven-metadata.xml[90m (21 kB at 25 kB/s)[0m
+Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-metadata.xml[90m (14 kB at 17 kB/s)[0m
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-archetype-plugin/maven-metadata.xml
+Progress (1): 1.0 kB                    Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0morg/apache/maven/plugins/maven-archetype-plugin/maven-metadata.xml[90m (1.0 kB at 16 kB/s)[0m
+[INFO] 
+[INFO] [1m------------------< [0;36morg.apache.maven:standalone-pom[0;1m >-------------------[m
+[INFO] [1mBuilding Maven Stub Project (No POM) 1[m
+[INFO] [1m--------------------------------[ pom ]---------------------------------[m
+[INFO] 
+[INFO] [1m>>> [0;32marchetype:3.3.1:generate[m [1m(default-cli)[0;1m > [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m >>>[m
+[INFO] 
+[INFO] [1m<<< [0;32marchetype:3.3.1:generate[m [1m(default-cli)[0;1m < [0;1mgenerate-sources[m @ [36mstandalone-pom[0;1m <<<[m
+[INFO] 
+[INFO] 
+[INFO] [1m--- [0;32marchetype:3.3.1:generate[m [1m(default-cli)[m @ [36mstandalone-pom[0;1m ---[m
+[INFO] Generating project in Interactive mode
+[90mDownloading from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0marchetype-catalog.xml
+Progress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.1/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.2/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.3/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.4/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.5/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.6/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.7/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.8/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 0.9/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.0/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.1/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.2/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.3/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.4/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.5/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.6/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.7/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.8/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 1.9/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.0/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.1/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.2/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.3/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.4/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.5/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.6/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.7/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.8/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 2.9/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.0/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.1/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.2/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.3/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.4/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.5/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.6/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.7/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.8/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 3.9/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.0/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.1/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.2/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.3/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.4/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.5/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.6/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.7/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.8/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 4.9/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.0/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.1/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.2/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.3/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.4/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.5/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.6/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.7/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.8/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 5.9/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.0/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.1/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.2/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.3/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.4/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.5/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.6/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.7/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.8/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 6.9/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.0/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.1/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.2/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.3/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.4/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.5/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.6/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.7/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.8/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 7.9/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.0/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.1/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.2/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.3/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.4/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.5/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.6/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.7/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.8/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 8.9/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.0/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.1/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.2/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.3/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.4/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.5/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.6/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.7/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.8/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 9.9/17 MBProgress (1): 10.0/17 MBProgress (1): 10.0/17 MBProgress (1): 10.0/17 MBProgress (1): 10/17 MB  Progress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 10/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 11/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 12/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 13/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 14/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 15/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 16/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17/17 MBProgress (1): 17 MB                      Downloaded[90m from [0mcentral[90m: https://repo.maven.apache.org/maven2/[0marchetype-catalog.xml[90m (17 MB at 5.3 MB/s)[0m
+[INFO] Archetype repository not defined. Using the one from [org.apache.maven.archetypes:maven-archetype-quickstart:1.5] found in catalog remote
+[INFO] Using property: groupId = com.lpt
+[INFO] Using property: artifactId = plagiarism-checker
+[INFO] Using property: version = 0.0.1-SNAPSHOT
+[INFO] Using property: package = com.lpt.plagiarism_checker
+Confirm properties configuration:
+groupId: com.lpt
+artifactId: plagiarism-checker
+version: 0.0.1-SNAPSHOT
+package: com.lpt.plagiarism_checker
+ Y: 
+"===============================================================
+	at org.eclipse.m2e.internal.launch.EclipseMavenLauncher$1.lambda$4(EclipseMavenLauncher.java:120)
+	at java.base/java.util.Optional.ifPresent(Optional.java:178)
+	at org.eclipse.m2e.internal.launch.EclipseMavenLauncher$1.launchesTerminated(EclipseMavenLauncher.java:107)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.run(LaunchManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.internal.core.LaunchManager$LaunchesNotifier.notify(LaunchManager.java:256)
+	at org.eclipse.debug.internal.core.LaunchManager.fireUpdate(LaunchManager.java:908)
+	at org.eclipse.debug.core.Launch.fireTerminate(Launch.java:481)
+	at org.eclipse.debug.core.Launch.handleDebugEvents(Launch.java:646)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.run(DebugPlugin.java:1287)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.debug.core.DebugPlugin$EventNotifier.dispatch(DebugPlugin.java:1321)
+	at org.eclipse.debug.core.DebugPlugin$EventDispatchJob.run(DebugPlugin.java:498)
+	... 1 more
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:07:15.357
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.477
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.477
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.479
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.481
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.497
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:07:15.515
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:07:18.281
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:07:19.642
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:07:19.677
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:10:05.690
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:10:05.699
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:10:47.468
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:10:47.471
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:11:07.376
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:11:07.380
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.418
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.419
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.420
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.422
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.430
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:12.434
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:11:30.692
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:30.955
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:30.967
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:30.967
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:30.976
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:30.998
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:11:31.003
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:11:31.194
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:11:31.199
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:12:28.163
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:12:29.375
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:12:29.972
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:12:29.980
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:12:29.996
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:12:30.022
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:12:31.375
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:13:37.408
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:13:37.416
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:00.280
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:00.284
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:11.262
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:11.265
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:24.129
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:24.143
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:28.919
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:28.922
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:34.451
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:34.454
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:54.859
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:15:54.863
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:00.473
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:00.482
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.692
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.693
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.695
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.696
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.706
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:16:44.710
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:54.652
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:54.663
+!MESSAGE The artifact mysql:mysql-connector-java:jar:8.0.33 has been relocated to com.mysql:mysql-connector-j:jar:8.0.33: MySQL Connector/J artifacts moved to reverse-DNS compliant Maven 2+ coordinates.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:55.751
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:16:55.758
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:16:55.774
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-05-14 00:16:55.813
+!MESSAGE Classpath changed for project: plagiarism-checker
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:17:05.022
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:17:05.028
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.jst.jee 4 2 2025-05-14 00:18:06.577
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.jst.jee".
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1083)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:187)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:238)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.getXmlWebApp(Web25MergedModelProvider.java:59)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.internalModelChanged(Web25MergedModelProvider.java:156)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.xmlModelChanged(Web25MergedModelProvider.java:147)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$XmlModelListener.modelsChanged(AbstractMergedModelProvider.java:93)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$NotifyRunner.run(JEE5ModelProvider.java:483)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.notifyListeners(JEE5ModelProvider.java:456)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.resourceChanged(JEE5ModelProvider.java:117)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$ResourceAdapter.notifyChanged(JEE5ModelProvider.java:81)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.setModified(ResourceImpl.java:1867)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.modified(ResourceImpl.java:486)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didRemove(ResourceImpl.java:447)
+	at org.eclipse.emf.common.util.AbstractEList.didClear(AbstractEList.java:170)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didClear(ResourceImpl.java:466)
+	at org.eclipse.emf.common.util.BasicEList.clear(BasicEList.java:638)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.doClear(NotifyingListImpl.java:1158)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.clear(NotifyingListImpl.java:1085)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.doUnload(ResourceImpl.java:1699)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doUnload(XMLResourceImpl.java:719)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.unload(ResourceImpl.java:1721)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredUnloadedResources(ResourceSetWorkbenchEditSynchronizer.java:164)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:233)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2465)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ui.ide.undo.AbstractWorkspaceOperation.execute(AbstractWorkspaceOperation.java:199)
+	at org.eclipse.ui.dialogs.WizardNewFileCreationPage.lambda$1(WizardNewFileCreationPage.java:405)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1043)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:260)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:830)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 39 more
+
+!ENTRY org.eclipse.jst.jee 4 0 2025-05-14 00:18:06.579
+!MESSAGE org.xml.sax.SAXParseExceptionpublicId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+!STACK 0
+org.eclipse.emf.ecore.resource.impl.ResourceSetImpl$1DiagnosticWrappedException: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.handleDemandLoadException(ResourceSetImpl.java:319)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:278)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.getResource(ProjectResourceSetImpl.java:1083)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelResource(JEE5ModelProvider.java:187)
+	at org.eclipse.jst.jee.model.internal.Web25ModelProvider.getModelObject(Web25ModelProvider.java:44)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.getModelObject(JEE5ModelProvider.java:238)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.getXmlWebApp(Web25MergedModelProvider.java:59)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.internalModelChanged(Web25MergedModelProvider.java:156)
+	at org.eclipse.jst.jee.model.internal.Web25MergedModelProvider.xmlModelChanged(Web25MergedModelProvider.java:147)
+	at org.eclipse.jst.jee.model.internal.common.AbstractMergedModelProvider$XmlModelListener.modelsChanged(AbstractMergedModelProvider.java:93)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$NotifyRunner.run(JEE5ModelProvider.java:483)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.notifyListeners(JEE5ModelProvider.java:456)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider.resourceChanged(JEE5ModelProvider.java:117)
+	at org.eclipse.jst.jee.model.internal.JEE5ModelProvider$ResourceAdapter.notifyChanged(JEE5ModelProvider.java:81)
+	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.setModified(ResourceImpl.java:1867)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.modified(ResourceImpl.java:486)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didRemove(ResourceImpl.java:447)
+	at org.eclipse.emf.common.util.AbstractEList.didClear(AbstractEList.java:170)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl$ContentsEList.didClear(ResourceImpl.java:466)
+	at org.eclipse.emf.common.util.BasicEList.clear(BasicEList.java:638)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.doClear(NotifyingListImpl.java:1158)
+	at org.eclipse.emf.common.notify.impl.NotifyingListImpl.clear(NotifyingListImpl.java:1085)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.doUnload(ResourceImpl.java:1699)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doUnload(XMLResourceImpl.java:719)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.unload(ResourceImpl.java:1721)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredUnloadedResources(ResourceSetWorkbenchEditSynchronizer.java:164)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.processDeferredResources(ResourceSetWorkbenchEditSynchronizer.java:233)
+	at org.eclipse.wst.common.internal.emfworkbench.integration.ResourceSetWorkbenchEditSynchronizer.resourceChanged(ResourceSetWorkbenchEditSynchronizer.java:141)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:321)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:311)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:174)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:459)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1587)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2465)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2476)
+	at org.eclipse.ui.ide.undo.AbstractWorkspaceOperation.execute(AbstractWorkspaceOperation.java:199)
+	at org.eclipse.ui.dialogs.WizardNewFileCreationPage.lambda$1(WizardNewFileCreationPage.java:405)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:124)
+Caused by: org.xml.sax.SAXParseExceptionpublicId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; systemId: platform:/resource/plagiarism-checker/src/main/webapp/WEB-INF/web.xml; lineNumber: 1; columnNumber: 1; Premature end of file.
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:204)
+	at java.xml/com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:178)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:400)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:327)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1465)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl$PrologDriver.next(XMLDocumentScannerImpl.java:1043)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:635)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLNSDocumentScannerImpl.next(XMLNSDocumentScannerImpl.java:113)
+	at java.xml/com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:551)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:890)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:826)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:134)
+	at java.xml/com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1225)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:643)
+	at java.xml/com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl.parse(SAXParserImpl.java:326)
+	at org.eclipse.emf.ecore.xmi.impl.XMLLoadImpl.load(XMLLoadImpl.java:175)
+	at org.eclipse.emf.ecore.xmi.impl.XMLResourceImpl.doLoad(XMLResourceImpl.java:260)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1563)
+	at org.eclipse.emf.ecore.resource.impl.ResourceImpl.load(ResourceImpl.java:1342)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoad(ResourceSetImpl.java:259)
+	at org.eclipse.jem.internal.util.emf.workbench.ProjectResourceSetImpl.demandLoad(ProjectResourceSetImpl.java:830)
+	at org.eclipse.emf.ecore.resource.impl.ResourceSetImpl.demandLoadHelper(ResourceSetImpl.java:274)
+	... 39 more
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:18:06.781
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:18:06.790
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.862
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.864
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.867
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.868
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.879
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:18:06.882
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:19:22.380
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:19:22.386
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:18.472
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:18.476
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:24.336
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:24.340
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:46.029
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:46.035
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:52.801
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:20:52.805
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:09.868
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:09.871
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:12.951
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:12.955
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:52.578
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:21:52.581
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:22:05.149
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:22:05.153
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.932
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.933
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.934
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.935
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.942
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:22:56.947
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.908
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/application-client_9.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.909
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/jobXML_2_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.910
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jakartaee/beans_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.911
+!MESSAGE The given URI https://jakarta.ee/xml/ns/jaxb/bindingschema_3_0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.919
+!MESSAGE The given URI https://jakarta.ee/xml/ns/validation/validation-configuration-3.0.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.wildwebdeveloper.xml 2 0 2025-05-14 00:23:05.923
+!MESSAGE The given URI http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_1.xsd from org.eclipse.jst.standard.schemas could not be resolved for local access
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:23:18.991
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:23:18.995
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:27:35.091
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-05-14 00:27:35.094
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.ui 4 0 2025-05-14 00:28:32.338
+!MESSAGE Unhandled event loop exception
+!STACK 0
+org.eclipse.swt.SWTException: Graphic is disposed
+	at org.eclipse.swt.SWT.error(SWT.java:4922)
+	at org.eclipse.swt.SWT.error(SWT.java:4837)
+	at org.eclipse.swt.SWT.error(SWT.java:4808)
+	at org.eclipse.swt.graphics.Image.getBounds(Image.java:1303)
+	at org.eclipse.swt.custom.CLabel.getTotalSize(CLabel.java:268)
+	at org.eclipse.swt.custom.CLabel.onPaint(CLabel.java:431)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Composite.WM_PAINT(Composite.java:1544)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4784)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.ole.win32.COM.VtblCall(Native Method)
+	at org.eclipse.swt.internal.ole.win32.IOleInPlaceObject.InPlaceDeactivate(IOleInPlaceObject.java:24)
+	at org.eclipse.swt.ole.win32.OleClientSite.deactivateInPlaceClient(OleClientSite.java:593)
+	at org.eclipse.swt.ole.win32.OleClientSite.onDispose(OleClientSite.java:938)
+	at org.eclipse.swt.ole.win32.OleClientSite$1.handleEvent(OleClientSite.java:130)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1179)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:889)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:169)
+	at org.eclipse.swt.widgets.Decorations.releaseChildren(Decorations.java:715)
+	at org.eclipse.swt.widgets.Shell.releaseChildren(Shell.java:1379)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:478)
+	at org.eclipse.swt.widgets.Decorations.dispose(Decorations.java:396)
+	at org.eclipse.jface.text.AbstractInformationControl.dispose(AbstractInformationControl.java:517)
+	at org.eclipse.jface.text.AbstractInformationControlManager.disposeInformationControl(AbstractInformationControlManager.java:1278)
+	at org.eclipse.jface.text.AbstractInformationControlManager.dispose(AbstractInformationControlManager.java:1293)
+	at org.eclipse.jface.text.AbstractHoverInformationControlManager.dispose(AbstractHoverInformationControlManager.java:919)
+	at org.eclipse.jface.text.TextViewerHoverManager.dispose(TextViewerHoverManager.java:367)
+	at org.eclipse.jface.text.TextViewer.handleDispose(TextViewer.java:1889)
+	at org.eclipse.jface.text.source.SourceViewer.handleDispose(SourceViewer.java:811)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.handleDispose(ProjectionViewer.java:1303)
+	at org.eclipse.jface.text.TextViewer.lambda$2(TextViewer.java:1750)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:140)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Widget.notifyListeners(Widget.java:853)
+	at org.eclipse.swt.custom.StyledText.handleDispose(StyledText.java:5613)
+	at org.eclipse.swt.custom.StyledText.lambda$28(StyledText.java:5423)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1179)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:889)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Canvas.releaseChildren(Canvas.java:169)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Composite.releaseChildren(Composite.java:933)
+	at org.eclipse.swt.widgets.Widget.release(Widget.java:896)
+	at org.eclipse.swt.widgets.Widget.dispose(Widget.java:478)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.disposeWidget(SWTPartRenderer.java:186)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.disposeWidget(ContributedPartRenderer.java:282)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:889)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.disposeWidget(ElementReferenceRenderer.java:113)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:934)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:889)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeRemoveGui(PartRenderingEngine.java:896)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:857)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.removeGui(PartRenderingEngine.java:841)
+	at org.eclipse.ui.internal.WorkbenchWindow.hardClose(WorkbenchWindow.java:2082)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1723)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1747)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1747)
+	at org.eclipse.ui.internal.Workbench$11.run(Workbench.java:1125)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:47)
+	at org.eclipse.ui.internal.Workbench.busyClose(Workbench.java:1108)
+	at org.eclipse.ui.internal.Workbench.lambda$4(Workbench.java:1414)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1414)
+	at org.eclipse.ui.internal.Workbench.close(Workbench.java:1385)
+	at org.eclipse.ui.internal.WorkbenchWindow.busyClose(WorkbenchWindow.java:1720)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$5(WorkbenchWindow.java:1747)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:67)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1747)
+	at org.eclipse.ui.internal.WorkbenchWindow.close(WorkbenchWindow.java:1756)
+	at org.eclipse.ui.internal.WorkbenchWindow.lambda$2(WorkbenchWindow.java:505)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.lambda$4(WBWRenderer.java:574)
+	at org.eclipse.swt.events.ShellListener$2.shellClosed(ShellListener.java:102)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:115)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:91)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4326)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1174)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1198)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1183)
+	at org.eclipse.swt.widgets.Decorations.closeWidget(Decorations.java:273)
+	at org.eclipse.swt.widgets.Decorations.WM_CLOSE(Decorations.java:1554)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4729)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2311)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:512)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4828)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2311)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.DefWindowProc(Native Method)
+	at org.eclipse.swt.widgets.Shell.callWindowProc(Shell.java:512)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4828)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1482)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2311)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5091)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(Native Method)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3710)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1151)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1042)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:639)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:339)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:546)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:173)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:208)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:143)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:109)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:439)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:271)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:668)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:605)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1481)

@@ -1,0 +1,9 @@
+INDEX VERSION 1.134
+D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1245872403.index
+\plagiarism-checker\src\main\java
+D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3471033006.index
+\PlagiarismChecker\src\main\java
+D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\869268182.index
+\plagiarism-checker\src\main\java
+D:\Plagiarism Detection System\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1287455170.index
+\PlagiarismChecker\src\main\java
