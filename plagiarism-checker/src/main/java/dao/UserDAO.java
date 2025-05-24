@@ -2,27 +2,23 @@ package dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
 import model.User;
-import utils.DBContext;
+import utils.DBUtil;
 
 public class UserDAO {
-	public User login(String username, String password) {
-		String sql = "SELECT * FROM users WHERE username=? AND password=?";
-		try (Connection conn = DBContext.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
+	public boolean insertUser(User user) {
+		String sql = "INSERT INTO users(username, password, email) VALUES (?, ?, ?)";
+		try (Connection conn = DBUtil.getConnection(); PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-			ps.setString(1, username);
-			ps.setString(2, password); 
+			stmt.setString(1, user.getUsername());
+			stmt.setString(2, user.getPassword()); 
+			stmt.setString(3, user.getEmail());
 
-			ResultSet rs = ps.executeQuery();
-			if (rs.next()) {
-				return new User(rs.getInt("id"), rs.getString("username"), rs.getString("password"),
-						rs.getString("role"));
-			}
+			return stmt.executeUpdate() > 0;
+
 		} catch (Exception e) {
 			e.printStackTrace();
+			return false;
 		}
-		return null;
 	}
 }
