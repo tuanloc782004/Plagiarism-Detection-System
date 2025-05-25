@@ -1,41 +1,35 @@
 package controller;
 
-import dao.UserDAO;
-import model.User;
-
 import javax.servlet.*;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
-import javax.servlet.annotation.*;
 import java.io.IOException;
+import model.User;
+import dao.UserDAO;
 
-@WebServlet("/register")
+@WebServlet("/RegisterServlet")
 public class RegisterServlet extends HttpServlet {
-    
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
 
-	protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+		String fullName = req.getParameter("fullName");
 
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        String email    = request.getParameter("email");
+		User u = new User();
+		u.setUsername(username);
+		u.setPassword(password); // nên hash nếu muốn bảo mật
+		u.setFullName(fullName);
 
-        User user = new User();
-        user.setUsername(username);
-        user.setPassword(password);
-        user.setEmail(email);
-
-        UserDAO dao = new UserDAO();
-        boolean success = dao.insertUser(user);
-
-        if (success) {
-            response.sendRedirect("success.jsp");
-        } else {
-            response.getWriter().println("Đăng ký thất bại.");
-        }
-    }
-	
+		boolean success = new UserDAO().register(u);
+		if (success) {
+			res.sendRedirect("login.jsp");
+		} else {
+			req.setAttribute("error", "Đăng ký thất bại hoặc tên đã tồn tại.");
+			req.getRequestDispatcher("register.jsp").forward(req, res);
+		}
+	}
 }

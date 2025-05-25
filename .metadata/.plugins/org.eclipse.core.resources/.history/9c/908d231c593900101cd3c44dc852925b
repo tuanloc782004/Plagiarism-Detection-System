@@ -1,0 +1,29 @@
+package controller;
+
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.io.IOException;
+import dao.UserDAO;
+import model.User;
+
+public class LoginServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		String username = req.getParameter("username");
+		String password = req.getParameter("password");
+
+		User u = new UserDAO().login(username, password);
+		if (u != null) {
+			HttpSession session = req.getSession();
+			session.setAttribute("user", u);
+			res.sendRedirect("home.jsp");
+		} else {
+			req.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu.");
+			req.getRequestDispatcher("login.jsp").forward(req, res);
+		}
+	}
+}
