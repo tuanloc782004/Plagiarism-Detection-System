@@ -1,0 +1,97 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Đăng nhập</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link">🏠 Trang chủ</a></li>
+				<li><a href="upload.jsp" class="nav-link">📥 Nộp bài</a></li>
+				<li><a href="essay_list.jsp" class="nav-link">📄 Danh sách
+						bài</a></li>
+				<c:choose>
+					<c:when test="${not empty sessionScope.user}">
+						<li><a href="LogoutServlet" class="nav-link logout-btn">🚪
+								Đăng xuất</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="login.jsp" class="nav-link login-btn">🔐
+								Đăng nhập</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="main-content">
+		<div class="auth-container">
+			<div class="auth-card">
+				<div class="auth-header">
+					<h1 class="auth-title">🔐 Đăng nhập</h1>
+					<p class="auth-subtitle">Chào mừng bạn quay trở lại!</p>
+				</div>
+
+				<form class="auth-form" id="loginForm" action="LoginServlet"
+					method="post">
+					<div class="form-group">
+						<label for="username" class="form-label"> 📧 Username </label> <input
+							type="text" id="username" name="username" class="form-input"
+							placeholder="Nhập username của bạn..." required>
+					</div>
+
+					<div class="form-group">
+						<label for="password" class="form-label"> 🔒 Mật khẩu </label>
+						<div class="password-input">
+							<input type="password" id="password" name="password"
+								class="form-input" placeholder="Nhập mật khẩu..." required>
+							<button type="button" class="password-toggle" id="passwordToggle">
+								👁️</button>
+						</div>
+					</div>
+
+					<button type="submit" class="btn btn-primary btn-large">
+						🚀 Đăng nhập</button>
+				</form>
+
+				<div class="auth-footer">
+					<p>
+						Chưa có tài khoản? <a href="register.jsp" class="auth-link">Đăng
+							ký ngay</a>
+					</p>
+				</div>
+			</div>
+
+			<div class="auth-decoration">
+				<div class="floating-elements">
+					<div class="floating-icon">🌸</div>
+					<div class="floating-icon">💖</div>
+					<div class="floating-icon">✨</div>
+					<div class="floating-icon">🎓</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+
+	<script src="assets/script.js"></script>
+</body>
+</html>

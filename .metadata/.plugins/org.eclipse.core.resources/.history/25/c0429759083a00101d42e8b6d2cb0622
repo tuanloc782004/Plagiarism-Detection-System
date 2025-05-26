@@ -1,0 +1,126 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Trang chủ</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link active">🏠 Trang chủ</a></li>
+				<li><a href="upload.jsp" class="nav-link">📥 Nộp bài</a></li>
+				<li><a href="essay_list.jsp" class="nav-link">📄 Danh sách
+						bài</a></li>
+				<!-- Nếu đã đăng nhập -->
+				<c:when test="${not empty sessionScope.user}">
+					<li><a href="LogoutServlet" class="nav-link logout-btn">🚪 Đăng
+							xuất</a></li>
+				</c:when>
+				<!-- Nếu chưa đăng nhập -->
+				<c:otherwise>
+					<li><a href="login.jsp" class="nav-link login-btn">🔐 Đăng
+							nhập</a></li>
+				</c:otherwise>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="main-content">
+		<section class="hero">
+			<div class="hero-content">
+				<h1 class="hero-title">
+					<span class="wave">👋</span> Chào mừng đến với EduCheck!
+				</h1>
+				<p class="hero-subtitle">Hệ thống kiểm tra đạo văn thông minh
+					dành cho sinh viên</p>
+				<div class="hero-buttons">
+					<a href="upload.html" class="btn btn-primary"> 📥 Nộp bài ngay
+					</a> <a href="submissions.html" class="btn btn-secondary"> 📄 Xem
+						bài đã nộp </a>
+				</div>
+			</div>
+			<div class="hero-image">
+				<div class="floating-elements">
+					<div class="floating-icon">📚</div>
+					<div class="floating-icon">✨</div>
+					<div class="floating-icon">🌸</div>
+					<div class="floating-icon">💖</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="features">
+			<div class="container">
+				<h2 class="section-title">✨ Tính năng nổi bật</h2>
+				<div class="features-grid">
+					<div class="feature-card">
+						<div class="feature-icon">📤</div>
+						<h3>Nộp bài dễ dàng</h3>
+						<p>Upload file .txt hoặc .docx một cách nhanh chóng và tiện
+							lợi</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">🔍</div>
+						<h3>Kiểm tra chính xác</h3>
+						<p>Hệ thống AI thông minh phát hiện đạo văn với độ chính xác
+							cao</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">📊</div>
+						<h3>Báo cáo chi tiết</h3>
+						<p>Xem tỷ lệ trùng lặp và nguồn tham khảo một cách rõ ràng</p>
+					</div>
+					<div class="feature-card">
+						<div class="feature-icon">⚡</div>
+						<h3>Xử lý nhanh chóng</h3>
+						<p>Kết quả kiểm tra được trả về trong thời gian ngắn nhất</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="stats">
+			<div class="container">
+				<div class="stats-grid">
+					<div class="stat-item">
+						<div class="stat-number">1,234</div>
+						<div class="stat-label">Bài đã kiểm tra</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">567</div>
+						<div class="stat-label">Sinh viên sử dụng</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">98%</div>
+						<div class="stat-label">Độ chính xác</div>
+					</div>
+					<div class="stat-item">
+						<div class="stat-number">< 5 phút</div>
+						<div class="stat-label">Thời gian xử lý</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+
+	<script src="assets/script.js"></script>
+</body>
+</html>

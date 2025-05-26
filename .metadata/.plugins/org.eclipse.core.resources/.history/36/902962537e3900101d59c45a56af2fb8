@@ -1,0 +1,95 @@
+package controller;
+
+import model.User;
+import util.DBUtil;
+import util.PlagiarismQueue;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+@WebServlet("/UploadEssayServlet")
+@MultipartConfig(fileSizeThreshold = 0, // Kích thước ngưỡng bộ nhớ đệm, file nhỏ hơn sẽ lưu trực tiếp vào đĩa
+		maxFileSize = 10 * 1024 * 1024, // 10MB - kích thước tối đa của 1 file
+		maxRequestSize = 20 * 1024 * 1024 // 20MB - kích thước tối đa của toàn bộ request multipart
+)
+public class UploadEssayServlet extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	private static final String UPLOAD_DIR = "uploads";
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// Lấy thông tin user đang đăng nhập từ session
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		if (user == null) {
+			response.sendRedirect("login.jsp");
+			return;
+		}
+
+		// Lấy file từ form
+		Part filePart = request.getPart("essayFile");
+		String fileName = getFileName(filePart);
+
+		// Đường dẫn lưu file vật lý
+		String appPath = request.getServletContext().getRealPath("");
+		String uploadPath = appPath + File.separator + UPLOAD_DIR;
+		File uploadDir = new File(uploadPath);
+		if (!uploadDir.exists())
+			uploadDir.mkdir();
+
+		String filePath = uploadPath + File.separator + fileName;
+		try (InputStream input = filePart.getInputStream(); FileOutputStream output = new FileOutputStream(filePath)) {
+			byte[] buffer = new byte[1024];
+			int len;
+			while ((len = input.read(buffer)) > 0) {
+				output.write(buffer, 0, len);
+			}
+		}
+
+		// Lưu thông tin vào DB (essays)
+		String relativePath = UPLOAD_DIR + "/" + fileName;
+		try (Connection conn = DBUtil.getConnection()) {
+			String sql = "INSERT INTO essays (user_id, filename, filepath, status) VALUES (?, ?, ?, 'PENDING')";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, user.getId());
+			ps.setString(2, fileName);
+			ps.setString(3, relativePath);
+			int result = ps.executeUpdate();
+
+			if (result > 0) {
+				int essayId = DBUtil.getLastInsertId(conn); // bạn cần viết hàm này trong DBUtil
+				PlagiarismQueue.getInstance().addEssayToQueue(essayId);
+
+				response.sendRedirect("home.jsp?success=1");
+			} else {
+				request.setAttribute("error", "Lỗi khi lưu vào cơ sở dữ liệu.");
+				request.getRequestDispatcher("upload.jsp").forward(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("error", "Lỗi hệ thống.");
+			request.getRequestDispatcher("upload.jsp").forward(request, response);
+		}
+	}
+
+	// Lấy tên file từ header
+	private String getFileName(Part part) {
+		String header = part.getHeader("content-disposition");
+		for (String s : header.split(";")) {
+			if (s.trim().startsWith("filename")) {
+				return s.substring(s.indexOf("=") + 2, s.length() - 1);
+			}
+		}
+		return null;
+	}
+}

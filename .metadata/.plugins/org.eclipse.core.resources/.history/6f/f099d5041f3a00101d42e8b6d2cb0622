@@ -1,0 +1,126 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+Object user = session.getAttribute("user");
+if (user == null) {
+	response.sendRedirect("login.jsp");
+	return;
+}
+%>
+<%@ page import="java.util.List"%>
+<%@ page import="model.PlagiarismResult"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Chi tiết kết quả</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link">🏠 Trang chủ</a></li>
+				<li><a href="UploadEssayServlet" class="nav-link">📥 Nộp
+						bài</a></li>
+				<li><a href="EssayListServlet" class="nav-link active">📄
+						Danh sách bài</a></li>
+				<c:choose>
+					<c:when test="${not empty sessionScope.user}">
+						<li><a href="LogoutServlet" class="nav-link logout-btn">🚪
+								Đăng xuất</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="LoginServlet" class="nav-link login-btn">🔐
+								Đăng nhập</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="main-content">
+		<div class="container">
+			<div class="page-header">
+				<h1 class="page-title">
+					📄 Chi tiết kết quả đạo văn cho bài luận ID:
+					<%=request.getAttribute("essayId")%></h1>
+				<p class="page-subtitle">Xem chi tiết các bài văn bị nghi
+					ngờ đạo văn</p>
+			</div>
+
+			<div class="submissions-container">
+				<div class="page-header">
+					<div class="breadcrumb">
+						<a href="EssayListServlet">📄 Danh sách bài</a> <span>›</span> <span>🔍
+							Chi tiết kết quả</span>
+					</div>
+					<h1 class="page-title">🔍 Chi tiết kết quả kiểm tra</h1>
+				</div>
+
+				<div class="submissions-table">
+					<div class="table-header">
+						<div class="table-row">
+							<div class="table-cell">📄 Tên file được so sánh</div>
+							<div class="table-cell">📊 Đạo văn (%)</div>
+							<div class="table-cell">👤 Mô tả</div>
+						</div>
+					</div>
+					<div class="table-body">
+						<%
+						List<PlagiarismResult> results = (List<PlagiarismResult>) request.getAttribute("results");
+						if (results != null && !results.isEmpty()) {
+							for (PlagiarismResult pr : results) {
+								String matchedFilename = pr.getMatchedFilename(); // hoặc lấy từ getter
+								double similarity = pr.getSimilarityPercent();
+								String description = pr.getDescription(); // bạn cần đảm bảo có mô tả (ví dụ như: tên bài bị trùng, người nộp, v.v.)
+
+								String badgeClass;
+								if (similarity < 20) {
+							badgeClass = "plagiarism-low";
+								} else if (similarity < 40) {
+							badgeClass = "plagiarism-medium";
+								} else {
+							badgeClass = "plagiarism-high";
+								}
+						%>
+						<div class="table-row">
+							<div class="table-cell"><%=matchedFilename%></div>
+							<div class="table-cell">
+								<span class="plagiarism-badge <%=badgeClass%>"> <%=String.format("%.2f", similarity)%>%
+								</span>
+							</div>
+							<div class="table-cell"><%=description%></div>
+						</div>
+						<%
+						}
+						} else {
+						%>
+						<div class="table-row">
+							<div class="table-cell" colspan="3">Không có kết quả nghi
+								ngờ đạo văn.</div>
+						</div>
+						<%
+						}
+						%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+</body>
+</html>

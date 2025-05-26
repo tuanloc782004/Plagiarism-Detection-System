@@ -1,0 +1,175 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ page import="model.User"%>
+<%
+User user = (User) session.getAttribute("user");
+if (user == null) {
+	response.sendRedirect("login.jsp");
+	return;
+}
+%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Nộp bài</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link">🏠 Trang chủ</a></li>
+				<li><a href="upload.jsp" class="nav-link active">📥 Nộp bài</a></li>
+				<li><a href="essay_list.jsp" class="nav-link">📄 Danh sách
+						bài</a></li>
+				<c:choose>
+					<c:when test="${not empty sessionScope.user}">
+						<li><a href="LogoutServlet" class="nav-link logout-btn">🚪
+								Đăng xuất</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="login.jsp" class="nav-link login-btn">🔐
+								Đăng nhập</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="main-content">
+		<div class="container">
+			<div class="page-header">
+				<h1 class="page-title">📥 Nộp bài luận</h1>
+				<p class="page-subtitle">Upload bài viết của bạn để kiểm tra đạo
+					văn</p>
+				<c:if test="${not empty error}">
+					<p class="auth-subtitle" style="color: red">${error}</p>
+				</c:if>
+			</div>
+
+			<div class="upload-container">
+				<form class="upload-form" id="uploadForm"
+					action="UploadEssayServlet" method="post"
+					enctype="multipart/form-data">
+					<div class="form-group">
+						<label class="form-label"> 📎 Chọn file bài luận </label>
+						<div class="file-upload-area" id="fileUploadArea">
+							<div class="file-upload-content">
+								<div class="file-upload-icon">📄</div>
+								<p class="file-upload-text">
+									Kéo thả file vào đây hoặc <span class="file-upload-link">chọn
+										file</span>
+								</p>
+								<p class="file-upload-hint">Hỗ trợ file .txt, .docx (tối đa
+									10MB)</p>
+							</div>
+							<input type="file" id="fileInput" name="essayFile"
+								accept=".txt,.docx" hidden required>
+						</div>
+						<div class="file-preview" id="filePreview" style="display: none;">
+							<div class="file-info">
+								<span class="file-icon">📄</span>
+								<div class="file-details">
+									<span class="file-name" id="fileName"></span> <span
+										class="file-size" id="fileSize"></span>
+								</div>
+								<button type="button" class="file-remove" id="fileRemove">❌</button>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-actions">
+						<button type="submit" class="btn btn-primary btn-large">
+							🚀 Nộp bài và kiểm tra</button>
+						<button type="reset" class="btn btn-secondary">🔄 Làm lại
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+
+	<script src="assets/script.js"></script>
+	<script>
+        // File upload functionality
+        const fileUploadArea = document.getElementById('fileUploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const filePreview = document.getElementById('filePreview');
+        const fileName = document.getElementById('fileName');
+        const fileSize = document.getElementById('fileSize');
+        const fileRemove = document.getElementById('fileRemove');
+
+        fileUploadArea.addEventListener('click', () => fileInput.click());
+        fileUploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.add('drag-over');
+        });
+        fileUploadArea.addEventListener('dragleave', () => {
+            fileUploadArea.classList.remove('drag-over');
+        });
+        fileUploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            fileUploadArea.classList.remove('drag-over');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                handleFile(e.target.files[0]);
+            }
+        });
+
+        fileRemove.addEventListener('click', () => {
+            fileInput.value = '';
+            filePreview.style.display = 'none';
+            fileUploadArea.style.display = 'block';
+        });
+
+        function handleFile(file) {
+            const allowedTypes = ['.txt', '.docx'];
+            const fileExtension = '.' + file.name.split('.').pop().toLowerCase();
+            
+            if (!allowedTypes.includes(fileExtension)) {
+                alert('❌ Chỉ hỗ trợ file .txt và .docx');
+                return;
+            }
+
+            if (file.size > 10 * 1024 * 1024) {
+                alert('❌ File không được vượt quá 10MB');
+                return;
+            }
+
+            fileName.textContent = file.name;
+            fileSize.textContent = formatFileSize(file.size);
+            fileUploadArea.style.display = 'none';
+            filePreview.style.display = 'block';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+    </script>
+</body>
+</html>

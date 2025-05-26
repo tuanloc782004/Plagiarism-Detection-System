@@ -1,0 +1,211 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+Object currentUser = session.getAttribute("user");
+if (currentUser == null) {
+	response.sendRedirect("login.jsp");
+	return;
+}
+%>
+<%@ page import="java.util.List"%>
+<%@ page import="controller.EssayListServlet.EssayWithUser"%>
+<%@ page import="model.Essay"%>
+<%@ page import="model.User"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Danh sách bài</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link">🏠 Trang chủ</a></li>
+				<li><a href="UploadEssayServlet" class="nav-link">📥 Nộp
+						bài</a></li>
+				<li><a href="EssayListServlet" class="nav-link active">📄
+						Danh sách bài</a></li>
+				<c:choose>
+					<c:when test="${not empty sessionScope.user}">
+						<li><a href="LogoutServlet" class="nav-link logout-btn">🚪
+								Đăng xuất</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="LoginServlet" class="nav-link login-btn">🔐
+								Đăng nhập</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<main class="main-content">
+		<div class="container">
+			<div class="page-header">
+				<h1 class="page-title">📄 Danh sách bài đã nộp</h1>
+				<p class="page-subtitle">Theo dõi trạng thái và kết quả kiểm tra
+					của các bài luận</p>
+			</div>
+
+			<div class="submissions-container">
+				<div class="submissions-header">
+					<div class="submissions-stats">
+						<div class="stat-card">
+							<span class="stat-icon">📝</span>
+							<div class="stat-info">
+								<span class="stat-number">${totalCount}</span> <span
+									class="stat-label">Tổng bài nộp</span>
+							</div>
+						</div>
+						<div class="stat-card">
+							<span class="stat-icon">⏳</span>
+							<div class="stat-info">
+								<span class="stat-number">${processingCount}</span> <span
+									class="stat-label">Đang xử lý</span>
+							</div>
+						</div>
+						<div class="stat-card">
+							<span class="stat-icon">✅</span>
+							<div class="stat-info">
+								<span class="stat-number">${completedCount}</span> <span
+									class="stat-label">Đã hoàn thành</span>
+							</div>
+						</div>
+					</div>
+					<a href="UploadEssayServlet" class="btn btn-primary">➕ Nộp bài
+						mới</a>
+				</div>
+
+				<div class="submissions-table">
+					<div class="table-header">
+						<div class="table-row">
+							<div class="table-cell">📄 Tên file</div>
+							<div class="table-cell">👤 Tác giả</div>
+							<div class="table-cell">📅 Ngày nộp</div>
+							<div class="table-cell">⚡ Trạng thái</div>
+							<div class="table-cell">📊 Đạo văn (%)</div>
+							<div class="table-cell">🔍 Chi tiết</div>
+						</div>
+					</div>
+					<div class="table-body">
+						<%
+						List<EssayWithUser> essayList = (List<EssayWithUser>) request.getAttribute("essayList");
+						if (essayList != null && !essayList.isEmpty()) {
+							for (EssayWithUser item : essayList) {
+								Essay essay = item.getEssay();
+								User user = item.getUser();
+						%>
+						<div class="table-row">
+							<div class="table-cell"><%=essay.getFilename()%></div>
+							<div class="table-cell"><%=user.getFullName() != null ? user.getFullName() : user.getUsername()%></div>
+							<div class="table-cell">
+								<span class="date" data-date="<%=essay.getSubmittedAt()%>"></span>
+							</div>
+							<div class="table-cell">
+								<span class="status" data-status="<%=essay.getStatus()%>"></span>
+							</div>
+							<div class="table-cell">
+								<span class="plagiarism"
+									data-rate="<%=essay.getPlagiarismPercent()%>"></span>
+							</div>
+							<%=essay.getPlagiarismPercent()%>
+
+							<div class="table-cell">
+								<%
+								String status = essay.getStatus();
+								if ("PROCESSED".equalsIgnoreCase(status)) {
+								%>
+								<a href="PlagiarismDetailServlet?essayId=<%=essay.getId()%>"
+									class="btn btn-small btn-outline"> 🔍 Xem chi tiết </a>
+								<%
+								} else {
+								%>
+								<button class="btn btn-small btn-disabled" disabled>⏳
+									Đang xử lý</button>
+								<%
+								}
+								%>
+							</div>
+
+						</div>
+						<%
+						}
+						} else {
+						%>
+						<div class="table-row">
+							<div class="table-cell" colspan="7">Chưa có bài luận nào.</div>
+						</div>
+						<%
+						}
+						%>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+
+	<script>
+		function getStatusBadge(status) {
+			switch(status) {
+				case 'PROCESSED':
+					return '<span class="status-badge status-completed">✅ Đã xử lý</span>';
+				case 'PENDING':
+					return '<span class="status-badge status-processing">⏳ Đang xử lý</span>';
+			}
+		}
+
+		function getPlagiarismBadge(rate) {
+		    if (!rate || isNaN(parseFloat(rate))) {
+		        return '<span class="plagiarism-badge plagiarism-pending">-</span>';
+		    }
+		    const numRate = parseFloat(rate);
+		    console.log("Rate raw:", rate, "Parsed:", numRate); // 👈 Thêm dòng này
+		    if (numRate < 20) {
+		        return `<span class="plagiarism-badge plagiarism-low">${numRate.toFixed(2)}%</span>`;
+		    } else if (numRate < 40) {
+		        return `<span class="plagiarism-badge plagiarism-medium">${numRate.toFixed(2)}%</span>`;
+		    } else {
+		        return `<span class="plagiarism-badge plagiarism-high">${numRate.toFixed(2)}%</span>`;
+		    }
+		}
+
+		function formatDate(dateString) {
+			const date = new Date(dateString);
+			return date.toLocaleDateString('vi-VN');
+		}
+
+		document.addEventListener("DOMContentLoaded", function () {
+			document.querySelectorAll(".status").forEach(el => {
+				const status = el.getAttribute("data-status");
+				el.innerHTML = getStatusBadge(status);
+			});
+
+			document.querySelectorAll(".plagiarism").forEach(el => {
+				const rate = el.getAttribute("data-rate");
+				el.innerHTML = getPlagiarismBadge(rate);
+			});
+
+			document.querySelectorAll(".date").forEach(el => {
+				const date = el.getAttribute("data-date");
+				el.innerText = formatDate(date);
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+package background;
+
+import util.PlagiarismQueue;
+import util.DBUtil;
+
+import java.sql.*;
+import java.util.*;
+
+public class PlagiarismProcessor extends Thread {
+	public void run() {
+		while (true) {
+			try {
+				Integer essayId = PlagiarismQueue.getInstance().takeEssay();
+
+				processEssay(essayId);
+
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
+	private void processEssay(int essayId) {
+		try (Connection conn = DBUtil.getConnection()) {
+
+			// Lấy nội dung của bài vừa upload
+			String getEssaySql = "SELECT id, filepath FROM essays WHERE id = ?";
+			PreparedStatement ps1 = conn.prepareStatement(getEssaySql);
+			ps1.setInt(1, essayId);
+			ResultSet rs1 = ps1.executeQuery();
+
+			if (!rs1.next())
+				return;
+
+			String filepath = rs1.getString("filepath");
+			String content1 = readFile("webapps/your-app-name/" + filepath); // tùy theo đường dẫn thực tế
+
+			// Lấy tất cả bài đã xử lý
+			String getOthersSql = "SELECT id, filepath FROM essays WHERE id != ? AND status = 'PROCESSED'";
+			PreparedStatement ps2 = conn.prepareStatement(getOthersSql);
+			ps2.setInt(1, essayId);
+			ResultSet rs2 = ps2.executeQuery();
+
+			double maxSimilarity = 0;
+
+			while (rs2.next()) {
+				int matchedId = rs2.getInt("id");
+				String otherPath = rs2.getString("filepath");
+				String content2 = readFile("webapps/your-app-name/" + otherPath);
+
+				double similarity = calculateSimilarity(content1, content2);
+				if (similarity > maxSimilarity)
+					maxSimilarity = similarity;
+
+				// Lưu vào bảng plagiarism_results
+				PreparedStatement insertResult = conn.prepareStatement(
+						"INSERT INTO plagiarism_results (essay_id, matched_essay_id, similarity_percent, description) VALUES (?, ?, ?, ?)");
+				insertResult.setInt(1, essayId);
+				insertResult.setInt(2, matchedId);
+				insertResult.setDouble(3, similarity);
+				insertResult.setString(4, "So sánh với bài #" + matchedId);
+				insertResult.executeUpdate();
+			}
+
+			// Cập nhật trạng thái và phần trăm đạo văn
+			PreparedStatement updateEssay = conn
+					.prepareStatement("UPDATE essays SET status='PROCESSED', plagiarism_percent=? WHERE id=?");
+			updateEssay.setDouble(1, maxSimilarity);
+			updateEssay.setInt(2, essayId);
+			updateEssay.executeUpdate();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	private String readFile(String path) throws Exception {
+		return new String(java.nio.file.Files.readAllBytes(java.nio.file.Paths.get(path)));
+	}
+
+	private double calculateSimilarity(String a, String b) {
+		// Đơn giản: Tính % số từ giống nhau
+		Set<String> setA = new HashSet<>(Arrays.asList(a.toLowerCase().split("\\W+")));
+		Set<String> setB = new HashSet<>(Arrays.asList(b.toLowerCase().split("\\W+")));
+
+		Set<String> intersection = new HashSet<>(setA);
+		intersection.retainAll(setB);
+
+		if (setA.size() == 0)
+			return 0;
+		return (intersection.size() * 100.0) / setA.size();
+	}
+}

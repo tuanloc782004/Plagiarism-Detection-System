@@ -27,7 +27,8 @@ public class PlagiarismDetailServlet extends HttpServlet {
 
 		try (Connection conn = DBUtil.getConnection()) {
 			String sql = "SELECT pr.*, e.filename AS matched_filename " + "FROM plagiarism_results pr "
-					+ "LEFT JOIN essays e ON pr.matched_essay_id = e.id " + "WHERE pr.essay_id = ?";
+					+ "LEFT JOIN essays e ON pr.matched_essay_id = e.id " + "WHERE pr.essay_id = ? "
+					+ "ORDER BY pr.similarity_percent DESC";
 
 			PreparedStatement ps = conn.prepareStatement(sql);
 			ps.setInt(1, essayId);

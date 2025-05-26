@@ -1,0 +1,35 @@
+//package util;
+//
+//import org.apache.poi.xwpf.usermodel.XWPFDocument;
+//import org.apache.poi.xwpf.extractor.XWPFWordExtractor;
+//
+//import java.io.*;
+//import java.nio.file.Files;
+//import java.nio.file.Paths;
+//
+//public class FileUtil {
+//
+//	// Đọc file txt
+//	public static String readTxtFile(String filepath) throws IOException {
+//		return new String(Files.readAllBytes(Paths.get(filepath)));
+//	}
+//
+//	// Đọc file docx
+//	public static String readDocxFile(String filepath) throws IOException {
+//		try (FileInputStream fis = new FileInputStream(filepath);
+//				XWPFDocument document = new XWPFDocument(fis);
+//				XWPFWordExtractor extractor = new XWPFWordExtractor(document)) {
+//			return extractor.getText();
+//		}
+//	}
+//
+//	// Đọc nội dung file essay tùy theo đuôi
+//	public static String readEssayFile(String filepath) throws IOException {
+//		if (filepath.toLowerCase().endsWith(".txt")) {
+//			return readTxtFile(filepath);
+//		} else if (filepath.toLowerCase().endsWith(".docx")) {
+//			return readDocxFile(filepath);
+//		}
+//		return "";
+//	}
+//}

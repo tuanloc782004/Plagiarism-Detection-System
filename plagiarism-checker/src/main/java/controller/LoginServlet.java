@@ -14,7 +14,15 @@ public class LoginServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		req.getRequestDispatcher("login.jsp").forward(req, res);
+	}
+
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
+
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 
@@ -22,7 +30,7 @@ public class LoginServlet extends HttpServlet {
 		if (u != null) {
 			HttpSession session = req.getSession();
 			session.setAttribute("user", u);
-			res.sendRedirect("home.jsp");
+			res.sendRedirect("upload.jsp");
 		} else {
 			req.setAttribute("error", "Sai tên đăng nhập hoặc mật khẩu.");
 			req.getRequestDispatcher("login.jsp").forward(req, res);

@@ -1,0 +1,111 @@
+//package controller;
+//
+//import model.Essay;
+//import util.DBUtil;
+//import util.FileUtil;
+//import util.SimilarityUtil;
+//
+//import javax.servlet.ServletException;
+//import javax.servlet.annotation.WebServlet;
+//import javax.servlet.http.*;
+//import java.io.File;
+//import java.io.IOException;
+//import java.sql.*;
+//import java.util.ArrayList;
+//import java.util.List;
+//
+//@WebServlet("/PlagiarismCheckServlet")
+//public class PlagiarismCheckServlet extends HttpServlet {
+//	/**
+//	 * 
+//	 */
+//	private static final long serialVersionUID = 1L;
+//
+//	private static final String UPLOAD_DIR = "uploads";
+//
+//	@Override
+//	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+//			throws ServletException, IOException {
+//
+//		// 1. Kết nối DB lấy các bài luận PENDING
+//		try (Connection conn = DBUtil.getConnection()) {
+//			String sqlPending = "SELECT * FROM essays WHERE status = 'PENDING'";
+//			PreparedStatement psPending = conn.prepareStatement(sqlPending);
+//			ResultSet rsPending = psPending.executeQuery();
+//
+//			List<Essay> pendingEssays = new ArrayList<>();
+//			while (rsPending.next()) {
+//				Essay essay = new Essay();
+//				essay.setId(rsPending.getInt("id"));
+//				essay.setUserId(rsPending.getInt("user_id"));
+//				essay.setFilename(rsPending.getString("filename"));
+//				essay.setFilepath(rsPending.getString("filepath"));
+//				essay.setStatus(rsPending.getString("status"));
+//				pendingEssays.add(essay);
+//			}
+//
+//			// Lấy các bài luận PROCESSED để so sánh
+//			String sqlProcessed = "SELECT * FROM essays WHERE status = 'PROCESSED'";
+//			PreparedStatement psProcessed = conn.prepareStatement(sqlProcessed);
+//			ResultSet rsProcessed = psProcessed.executeQuery();
+//
+//			List<Essay> processedEssays = new ArrayList<>();
+//			while (rsProcessed.next()) {
+//				Essay essay = new Essay();
+//				essay.setId(rsProcessed.getInt("id"));
+//				essay.setUserId(rsProcessed.getInt("user_id"));
+//				essay.setFilename(rsProcessed.getString("filename"));
+//				essay.setFilepath(rsProcessed.getString("filepath"));
+//				essay.setStatus(rsProcessed.getString("status"));
+//				processedEssays.add(essay);
+//			}
+//
+//			// 2. Đọc file, tính độ giống từng cặp
+//			for (Essay pendingEssay : pendingEssays) {
+//				String appPath = getServletContext().getRealPath("");
+//				String pendingFilePath = appPath + File.separator + pendingEssay.getFilepath();
+//
+//				String pendingContent = FileUtil.readEssayFile(pendingFilePath);
+//
+//				double maxSimilarity = 0;
+//				int matchedEssayId = 0;
+//
+//				for (Essay processedEssay : processedEssays) {
+//					String processedFilePath = appPath + File.separator + processedEssay.getFilepath();
+//					String processedContent = FileUtil.readEssayFile(processedFilePath);
+//
+//					double similarity = SimilarityUtil.jaccardSimilarity(pendingContent, processedContent);
+//
+//					if (similarity > maxSimilarity) {
+//						maxSimilarity = similarity;
+//						matchedEssayId = processedEssay.getId();
+//					}
+//
+//					// Lưu kết quả chi tiết từng cặp so sánh vào bảng plagiarism_results
+//					String insertResult = "INSERT INTO plagiarism_results (essay_id, matched_essay_id, similarity_percent, description) VALUES (?, ?, ?, ?)";
+//					try (PreparedStatement psInsert = conn.prepareStatement(insertResult)) {
+//						psInsert.setInt(1, pendingEssay.getId());
+//						psInsert.setInt(2, processedEssay.getId());
+//						psInsert.setDouble(3, similarity * 100);
+//						psInsert.setString(4, "Similarity check using Jaccard similarity");
+//						psInsert.executeUpdate();
+//					}
+//				}
+//
+//				// 3. Cập nhật bảng essays: plagiarism_percent + status = PROCESSED
+//				String updateEssay = "UPDATE essays SET plagiarism_percent = ?, status = 'PROCESSED' WHERE id = ?";
+//				try (PreparedStatement psUpdate = conn.prepareStatement(updateEssay)) {
+//					psUpdate.setDouble(1, maxSimilarity * 100);
+//					psUpdate.setInt(2, pendingEssay.getId());
+//					psUpdate.executeUpdate();
+//				}
+//			}
+//
+//			response.getWriter().println("Kiểm tra đạo văn hoàn tất!");
+//
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			response.getWriter().println("Lỗi khi kiểm tra đạo văn.");
+//		}
+//	}
+//}

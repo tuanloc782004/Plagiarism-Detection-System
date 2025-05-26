@@ -1,0 +1,106 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%
+Object currentUser = session.getAttribute("user");
+if (currentUser == null) {
+	response.sendRedirect("login.jsp");
+	return;
+}
+%>
+<%@ page import="java.util.List"%>
+<%@ page import="controller.EssayListServlet.EssayWithUser"%>
+<%@ page import="model.Essay"%>
+<%@ page import="model.User"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduCheck | Danh sách bài</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+	<nav class="navbar">
+		<div class="nav-container">
+			<div class="nav-logo">
+				<span class="logo-icon">🎓</span> <span class="logo-text">EduCheck</span>
+			</div>
+			<ul class="nav-menu" id="nav-menu">
+				<li><a href="home.jsp" class="nav-link">🏠 Trang chủ</a></li>
+				<li><a href="UploadEssayServlet" class="nav-link">📥 Nộp
+						bài</a></li>
+				<li><a href="EssayListServlet" class="nav-link active">📄
+						Danh sách bài</a></li>
+				<c:choose>
+					<c:when test="${not empty sessionScope.user}">
+						<li><a href="LogoutServlet" class="nav-link logout-btn">🚪
+								Đăng xuất</a></li>
+					</c:when>
+					<c:otherwise>
+						<li><a href="LoginServlet" class="nav-link login-btn">🔐
+								Đăng nhập</a></li>
+					</c:otherwise>
+				</c:choose>
+			</ul>
+			<div class="hamburger" id="hamburger">
+				<span></span> <span></span> <span></span>
+			</div>
+		</div>
+	</nav>
+
+	<h2>Danh sách bài luận</h2>
+
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Tên bài luận</th>
+				<th>Tác giả</th>
+				<th>Ngày gửi</th>
+				<th>Trạng thái</th>
+				<th>Phần trăm đạo văn (%)</th>
+				<th>Chi tiết đạo văn</th>
+			</tr>
+		</thead>
+		<tbody>
+			<%
+			List<EssayWithUser> essayList = (List<EssayWithUser>) request.getAttribute("essayList");
+			if (essayList != null && !essayList.isEmpty()) {
+				for (EssayWithUser item : essayList) {
+					Essay essay = item.getEssay();
+					User user = item.getUser();
+			%>
+			<tr>
+				<td><%=essay.getId()%></td>
+				<td><%=essay.getFilename()%></td>
+				<td><%=user.getFullName() != null ? user.getFullName() : user.getUsername()%></td>
+				<td><%=essay.getSubmittedAt()%></td>
+				<td><%=essay.getStatus()%></td>
+				<td><%=String.format("%.2f", essay.getPlagiarismPercent())%></td>
+				<td><a class="detail-link"
+					href="PlagiarismDetailServlet?essayId=<%=essay.getId()%>">Xem
+						chi tiết</a></td>
+			</tr>
+			<%
+			}
+			} else {
+			%>
+			<tr>
+				<td colspan="7">Chưa có bài luận nào.</td>
+			</tr>
+			<%
+			}
+			%>
+		</tbody>
+	</table>
+
+	<footer class="footer">
+		<div class="container">
+			<p>&copy; 2024 EduCheck. Made with 💖 for students</p>
+		</div>
+	</footer>
+
+	<script src="assets/script.js"></script>
+</body>
+</html>

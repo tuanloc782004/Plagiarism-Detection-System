@@ -1,0 +1,24 @@
+package listener;
+
+import background.PlagiarismProcessor;
+
+import javax.servlet.ServletContext;
+import javax.servlet.ServletContextEvent;
+import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+
+@WebListener
+public class AppStartupListener implements ServletContextListener {
+	@Override
+	public void contextInitialized(ServletContextEvent sce) {
+		ServletContext context = sce.getServletContext();
+		String baseUploadPath = context.getRealPath("");
+
+		new PlagiarismProcessor(baseUploadPath).start(); // Bắt đầu luồng xử lý nền
+	}
+
+	@Override
+	public void contextDestroyed(ServletContextEvent sce) {
+		// Có thể dừng thread nếu cần
+	}
+}

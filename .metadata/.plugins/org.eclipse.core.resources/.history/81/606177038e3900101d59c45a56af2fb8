@@ -1,0 +1,116 @@
+package controller;
+
+import model.User;
+import util.DBUtil;
+import util.PlagiarismQueue;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.*;
+import java.io.*;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+@WebServlet("/UploadEssayServlet")
+@MultipartConfig(fileSizeThreshold = 0, maxFileSize = 10 * 1024 * 1024, // 10MB
+		maxRequestSize = 20 * 1024 * 1024 // 20MB
+)
+public class UploadEssayServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	private static final String UPLOAD_DIR = "uploads";
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+
+		// Lấy thông tin user từ session
+		HttpSession session = request.getSession();
+		User user = (User) session.getAttribute("user");
+		if (user == null) {
+			response.sendRedirect("login.jsp");
+			return;
+		}
+
+		// Lấy file từ form
+		Part filePart = request.getPart("essayFile");
+		String originalFileName = getFileName(filePart);
+
+		if (originalFileName == null || originalFileName.isEmpty()) {
+			request.setAttribute("error", "Không có file được tải lên.");
+			request.getRequestDispatcher("upload.jsp").forward(request, response);
+			return;
+		}
+
+		// Đường dẫn lưu file vật lý trong webapp/uploads
+		String appPath = request.getServletContext().getRealPath("");
+		String uploadPath = appPath + UPLOAD_DIR;
+		File uploadDir = new File(uploadPath);
+		if (!uploadDir.exists()) {
+			uploadDir.mkdirs(); // tạo thư mục nếu chưa tồn tại
+		}
+
+		// Tạo tên file mới (đổi format thời gian tránh dấu :)
+		LocalDateTime now = LocalDateTime.now();
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMdd_HHmmss");
+		String formattedDateTime = now.format(formatter);
+		String newFileName = formattedDateTime + "_" + originalFileName;
+
+		String filePath = uploadPath + File.separator + newFileName;
+
+		// In log debug đường dẫn
+		System.out.println("Upload Path: " + uploadPath);
+		System.out.println("Save file to: " + filePath);
+
+		// Ghi file vào thư mục uploads
+		try (InputStream input = filePart.getInputStream(); FileOutputStream output = new FileOutputStream(filePath)) {
+			byte[] buffer = new byte[1024];
+			int len;
+			while ((len = input.read(buffer)) > 0) {
+				output.write(buffer, 0, len);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+			request.setAttribute("error", "Lỗi khi lưu file: " + e.getMessage());
+			request.getRequestDispatcher("upload.jsp").forward(request, response);
+			return;
+		}
+
+		// Lưu thông tin file vào DB (bảng essays)
+		String relativePath = UPLOAD_DIR + newFileName;
+		try (Connection conn = DBUtil.getConnection()) {
+			String sql = "INSERT INTO essays (user_id, filename, filepath, status) VALUES (?, ?, ?, 'PENDING')";
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setInt(1, user.getId());
+			ps.setString(2, newFileName);
+			ps.setString(3, relativePath);
+			int result = ps.executeUpdate();
+
+			if (result > 0) {
+				int essayId = DBUtil.getLastInsertId(conn); // Cần implement trong DBUtil
+				PlagiarismQueue.getInstance().addEssayToQueue(essayId);
+				response.sendRedirect("home.jsp?success=1");
+			} else {
+				request.setAttribute("error", "Lỗi khi lưu vào cơ sở dữ liệu.");
+				request.getRequestDispatcher("upload.jsp").forward(request, response);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+			request.setAttribute("error", "Lỗi hệ thống.");
+			request.getRequestDispatcher("upload.jsp").forward(request, response);
+		}
+	}
+
+	// Lấy tên file từ header multipart/form-data
+	private String getFileName(Part part) {
+		String header = part.getHeader("content-disposition");
+		for (String s : header.split(";")) {
+			if (s.trim().startsWith("filename")) {
+				return s.substring(s.indexOf('=') + 2, s.length() - 1);
+			}
+		}
+		return null;
+	}
+}

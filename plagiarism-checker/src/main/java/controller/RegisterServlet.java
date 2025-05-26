@@ -14,7 +14,15 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		req.getRequestDispatcher("register.jsp").forward(req, res);
+	}
+
+	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		req.setCharacterEncoding("UTF-8");
+
 		String username = req.getParameter("username");
 		String password = req.getParameter("password");
 		String fullName = req.getParameter("fullName");
@@ -26,7 +34,8 @@ public class RegisterServlet extends HttpServlet {
 
 		boolean success = new UserDAO().register(u);
 		if (success) {
-			res.sendRedirect("login.jsp");
+			req.setAttribute("error", "Đăng ký thành công, vui lòng đăng nhập.");
+			req.getRequestDispatcher("register.jsp").forward(req, res);
 		} else {
 			req.setAttribute("error", "Đăng ký thất bại hoặc tên đã tồn tại.");
 			req.getRequestDispatcher("register.jsp").forward(req, res);
